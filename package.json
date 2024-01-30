@@ -1,0 +1,44 @@
+{
+  "name": "ts-sdk-template",
+  "version": "0.0.1",
+  "description": "A TypeScript template for using the Aragon SDK in NodeJS environments",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean && tsc",
+    "clean": "rm -rf dist",
+    "lint": "eslint --ext .ts .",
+    "test": "jest",
+    "start": "ts-node --esm src/index.ts",
+    "prettier:check": "prettier --check \"**/*.{js,json,md,ts,yml}\"",
+    "prettier:write": "prettier --write \"**/*.{js,json,md,ts,yml}\""
+  },
+  "author": "Aragon Project",
+  "license": "AGPL-3.0-or-later",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@aragon/sdk-client": "^1.22.1",
+    "@aragon/sdk-ipfs": "^1.1.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/jest": "^29.5.11",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.44.0",
+    "@web-std/fetch": "^4.2.1",
+    "@web-std/file": "^3.0.3",
+    "@web-std/form-data": "^3.1.0",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}
